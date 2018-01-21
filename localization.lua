@@ -335,7 +335,7 @@ elseif ( GetLocale() == "deDE" ) then
 		end;
 
 		-- fix for ooze covered
-		oreTypeClass = string.gsub(string.gsub(string.gsub(string.gsub(input, "br\195\188hschlammbedecktes ", ""), "kleines ", ""), "reiches ", "" ), "br\195\188hschlammbedeckte ", "" );
+		oreTypeClass = string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(input, "br\195\188hschlammbedecktes ", ""), "schlammbedeckte ", ""), "schlammbedecktes ", ""), "kleines ", ""), "reiches ", "" ), "br\195\188hschlammbedeckte ", "" );
 
 		if (string.find(oreTypeClass, ORE_CLASS_VEIN)) then
 			oreType = strsub(oreTypeClass, 0, string.len(oreTypeClass)-string.len(ORE_CLASS_VEIN));
